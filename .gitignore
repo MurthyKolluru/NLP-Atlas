@@ -1,0 +1,56 @@
+# Create the .gitignore file with the final combined rules
+gitignore_content = """# ---- Python / VS Code ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+env/
+venv/
+.ipynb_checkpoints/
+.vscode/
+
+# ---- Project data & artifacts ----
+data/
+datasets/
+cache/
+checkpoints/
+models/
+outputs/
+logs/
+
+# Large/binary files
+*.zip
+*.7z
+*.rar
+*.gz
+*.bz2
+*.xz
+*.tar
+*.npy
+*.npz
+*.pt
+*.pth
+*.h5
+*.ckpt
+*.bin
+*.model
+*.pickle
+*.pkl
+*.joblib
+*.sqlite
+*.db
+*.parquet
+*.feather
+*.onnx
+*.tflite
+
+# Custom large embeddings
+*.kv
+*.word2vec
+*glove*.txt
+*.jsonl
+
+# OS junk
+.DS_Store
+Thumbs.db
+"""

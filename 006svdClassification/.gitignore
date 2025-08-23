@@ -1,0 +1,38 @@
+﻿# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Data & cache
+*.pkz
+*.pickle
+*.pkl
+*.csv
+*.tsv
+*.txt
+cache/
+nltk_data/
+
+# Models (heavy)
+models/
+*.joblib
+*.h5
+*.pt
+*.pkl
+
+# Reports (generated)
+reports/figures/
+reports/*.txt
+
+# Jupyter/IPython
+.ipynb_checkpoints/
+*.ipynb~
+
+# VSCode/IDE
+.vscode/
+.idea/

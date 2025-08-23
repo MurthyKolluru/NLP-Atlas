@@ -1,0 +1,36 @@
+﻿dataset:
+  name: "20newsgroups"
+  categories:
+    - comp.graphics
+    - rec.sport.hockey
+    - sci.med
+    - talk.politics.misc
+  remove: ["headers", "footers", "quotes"]
+  data_home: "C:\\Users\\murth\\Desktop\\NLP\\cache\\sk_cache"
+
+pipeline:
+  steps: [clean, tokenize, stopwords, synonyms, lemmatize, tfidf, svd, normalize, classify]
+  tfidf:
+    max_features: 50000
+    ngram_range: [1, 2]
+    min_df: 2
+    max_df: 0.9
+  svd:
+    n_components: 100
+    random_state: 42
+  classifier:
+    type: "logistic_regression"
+    params:
+      penalty: "l2"
+      solver: "saga"
+      multi_class: "auto"
+      max_iter: 500
+      n_jobs: -1
+evaluation:
+  test_size: 0.2
+  random_state: 42
+  metrics: ["accuracy", "classification_report", "confusion_matrix"]
+
+paths:
+  models_dir: "models"
+  figures_dir: "reports/figures"
