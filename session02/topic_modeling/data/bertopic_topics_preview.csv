@@ -1,0 +1,10 @@
+model,topic_id,n_docs,top_terms,example_doc_idx,example_snippet
+BERTopic,0,5056,"people, does, know, god, time, think, new, did, good, make",0,posted couple notes encountering problem based suggestions mark aitchison university canterbury new zealand chris larrieu cs wm think problem screen saver outputs sound pc speaker  ...
+BERTopic,1,233,"hockey, game, team, 10, 11, 14, nhl, 12, season, 13",6,providence bruins lost games home came tie series road hope bruins toast toast know want eat words ai gonna happen golf courses boston area playable condition jack acid consumes 47 ...
+BERTopic,2,217,"02, 03, game, 04, won, year, team, games, 05, lost",2,totally agree point jose viscaino looked single hitter swings count maddux pitching teams run touched ball day think lefty righty thing watching cubs games feeling steve stone know ...
+BERTopic,3,122,"nan, , , , , , , , , ",11,nan
+BERTopic,4,110,"yeah, does, test, did, fuhr, tony, inguiry, chuvashia, er1, eridan",36,agree
+BERTopic,5,54,"cheek, 15, , , , , , , , ",42,
+BERTopic,6,45,"doubt, deleted, jmd, handheld, denies, oops, leaf, phase, forgot, okay",217,think confusing tautological false misleading
+BERTopic,7,25,"har, bait, liked, cool, sure, flame, really, brought, right, exactly",241,air hahaha sentiments exactly
+BERTopic,8,24,"canada, health, insurance, canadian, pocklington, private, care, money, rsa, government",562,live british columbia canada cable company called rogers cable does know scrambling techniques ways getting suggestions

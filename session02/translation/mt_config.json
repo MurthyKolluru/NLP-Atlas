@@ -1,0 +1,15 @@
+{
+  "seed": 42,
+  "base_dir": "C:\\Users\\murth\\Desktop\\nlpSession02\\codeBase",
+  "proj_dir": "C:\\Users\\murth\\Desktop\\nlpSession02\\codeBase\\translation",
+  "dataset": "iwslt2017",
+  "lang_pair": "de-en",
+  "train_size": 5000,
+  "valid_size": 1000,
+  "test_size": 1000,
+  "bpe_vocab": 8000,
+  "max_len": 40,
+  "lstm_hidden": 256,
+  "lstm_layers": 2,
+  "epochs": 3
+}

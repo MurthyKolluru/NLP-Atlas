@@ -1,0 +1,57 @@
+Step 0: Start Docker Desktop
+
+Make sure the whale icon is running.
+
+Step 1: Start Elasticsearch
+Open PowerShell in your project root:
+
+cd C:\Users\murth\Desktop\nlpSession02\codeBase\search
+& ..\.venv\Scripts\Activate.ps1
+./ops/run_es.ps1 start
+
+👉 Wait ~10 seconds; ES should respond with version + tagline.
+
+Step 2: Verify index & doc count
+
+Invoke-RestMethod http://localhost:9200/agnews_v1/_count
+
+👉 Expect: {"count":30000, ...}
+
+# 1) Go to project
+cd C:\Users\murth\Desktop\nlpSession02\codeBase\search
+
+# 2) Activate venv
+& ..\.venv\Scripts\Activate.ps1
+
+# 3) Run FastAPI with auto-reload (keep this window open)
+uvicorn api.app:app --reload --port 8000
+
+
+In another powershell
+
+# 1) Go to project
+cd C:\Users\murth\Desktop\nlpSession02\codeBase\search
+
+# 2) Activate venv
+& ..\.venv\Scripts\Activate.ps1
+
+
+# 1. Simple search: top 3 docs for "stock market"
+Invoke-RestMethod "http://127.0.0.1:8000/search?q=stock%20market&size=3" | Select-Object -ExpandProperty hits | Format-Table id,score,title
+
+# 2. Category filter: restrict to Business docs
+Invoke-RestMethod "http://127.0.0.1:8000/search?q=stock%20market&cat=Business&size=3" | Select-Object -ExpandProperty hits | Format-Table id,category,title
+
+# 3. Autocomplete suggestions: try prefix "mic"
+Invoke-RestMethod "http://127.0.0.1:8000/suggest?prefix=mic&size=5"
+
+# 4. Autocomplete suggestions: try prefix "new"
+Invoke-RestMethod "http://127.0.0.1:8000/suggest?prefix=new&size=5"
+
+# 5. Explain a document (replace agnews-123 with an actual id you saw)
+# Example placeholder:
+# Invoke-RestMethod "http://127.0.0.1:8000/explain/agnews-123?q=stock%20market" | ConvertTo-Json -Depth 4 | Out-String | more
+
+# 6. Fetch full doc by id (replace agnews-123 with real id)
+# Example placeholder:
+# Invoke-RestMethod "http://127.0.0.1:8000/doc/agnews-123" | Select-Object id,category,title

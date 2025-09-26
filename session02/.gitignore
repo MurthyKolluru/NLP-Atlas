@@ -1,0 +1,24 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+*.log
+
+# VS Code settings (optional if you don’t want to share editor configs)
+.vscode/
+
+# OS-specific junk
+.DS_Store
+Thumbs.db

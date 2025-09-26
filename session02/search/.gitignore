@@ -1,0 +1,44 @@
+﻿# =========================
+# PYTHON / SEARCH PROJECT GITIGNORE
+# =========================
+
+# Bytecode / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Jupyter / VS Code
+.ipynb_checkpoints/
+.vscode/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Data
+data/raw/
+data/processed/
+data/qrels/
+
+# Elasticsearch dumps
+*.ndjson
+
+# Streamlit cache
+.streamlit/
+
+# Pytest / coverage
+htmlcov/
+.tox/
+.coverage
+.pytest_cache/
+.mypy_cache/
