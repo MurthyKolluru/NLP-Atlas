@@ -1,0 +1,13 @@
+﻿# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# OS noise
+.DS_Store
+Thumbs.db
+# Jupyter cache
+*.egg-info/
+# Optional: large raw data (keep if you need it)
+data/
