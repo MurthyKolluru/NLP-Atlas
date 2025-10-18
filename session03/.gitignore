@@ -1,0 +1,11 @@
+﻿# session03-only ignore
+*.pt
+*.bin
+*.ckpt
+*.log
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+logs/
+tmp/
+wandb/

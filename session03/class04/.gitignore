@@ -1,0 +1,12 @@
+﻿# Class04 ignores
+__pycache__/
+*.pyc
+logs/
+figs/
+tmp/
+*.pt
+*.bin
+*.ckpt
+*.cache/
+wandb/
+.ipynb_checkpoints/

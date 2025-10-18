@@ -1,0 +1,16 @@
+﻿# Lab04 monitoring thresholds (edit as needed)
+rollout:
+  batch_size: 16
+  max_steps: 4
+
+thresholds:
+  reward_drop: -0.05        # trigger if mean reward delta < -0.05
+  kl_max: 0.20              # trigger if KL > 0.20 for 3 consecutive steps
+  entropy_min: 3.5          # trigger if entropy < 3.5
+  drift_max: 0.30           # trigger if R_drift > 0.30
+
+paths:
+  eval_prompts: "C:\Users\murth\Desktop\NLP+RL\code\class04\data\eval_prompts.csv"
+  cache:        "C:\Users\murth\Desktop\NLP+RL\code\class04\data\cache.csv"
+  policy:       "C:\Users\murth\Desktop\NLP+RL\code\class04\checkpoints\policy.pt"
+  reward_model: "C:\Users\murth\Desktop\NLP+RL\code\class04\checkpoints\reward_model.pt"
